@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Morpion!{% endblock %}
+{% block javascripts %}
+    <script src="{{asset('assets/script/morpion.js')}}" defer></script>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('assets/styles/morpion.css')}}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container mt-5 text-center">
+        <h1>Tic Tac Toe</h1>
+        <!--Plateau-->
+        <section id="jeu">
+            <!--Chaque case à son index-->
+            <div data-index="0" class="case"></div>
+            <div data-index="1" class="case"></div>
+            <div data-index="2" class="case"></div>
+            <div data-index="3" class="case"></div>
+            <div data-index="4" class="case"></div>
+            <div data-index="5" class="case"></div>
+            <div data-index="6" class="case"></div>
+            <div data-index="7" class="case"></div>
+            <div data-index="8" class="case"></div>
+        </section>
+        <!--Message de victoire et bouton Recommencer-->
+        <h2></h2>
+        <button class="btn btn-info" id="recommencer" onclick="reload()">Rejouer <span class="far fa-hand-pointer"></span></button>
+    </div>
+{% endblock %}

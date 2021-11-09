@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue!{% endblock %}
+{% block javascripts %}
+    <script src="{{asset('assets/script/accueil.js')}}" defer></script>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('assets/styles/accueil.css')}}">
+{% endblock %}
+
+{% block body %}
+
+    <!--Home-->
+    <h1 class="container mt-5 text-center">
+        Benvenutu in u mo situ, sò felice di accoglievi.<br/>        
+        Cumu va ? Vuleria una bevanda? <span class="fas fa-glass-cheers"></span><br/>
+        Oghje vi offre una spassighjata in u mondu di a simfonia è di u javascript.<br/>        
+        Ebbè vi aghju torturatu abbastanza cù a lingua corsa.<br/><hr>
+        J'arrête mes bétises, désolé <span class="fas fa-smile-wink"></span>.<br/>
+        Le reste du site sera en français, amusez-vous bien <span class="fas fa-smile-beam"></span>
+    </h1>
+    
+{% endblock %}

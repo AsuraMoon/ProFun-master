@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenu Sur Mon ChiFouMi!{% endblock %}
+
+{% block javascripts %}
+    <script src="{{asset('assets/script/chifoumi.js')}}" defer></script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('assets/styles/chifoumi.css')}}">
+{% endblock %}
+
+{% block body %}
+
+        <!-- TITLE & DESCRIPTION -->
+        <title>Jeu du ChiFouMi</title>
+        <meta name="description" content="Amuse toi avec ce jeu du chifoumi !">
+
+        <div class="container mt-5 text-center">
+            
+            <!--Boutons de jeux -->
+            <div>
+                <button class="btn btn-success mr-3" id="scissors" value="scissors">Ciseaux <span class="fas fa-hand-scissors"></span></button>
+                <button class="btn btn-primary mr-3" id="paper" value="paper">Papier <span class="fas fa-hand-paper"></span></button>
+                <button class="btn btn-danger" id="stone" value="stone">Pierre <span class="fas fa-hand-rock"></span></button>
+            </div>
+
+            <!-- Images et resultats de chaque round -->
+            <div class="mt-5">
+                <div id="scissorsDOM"></div>
+                <div id="paperDOM"></div>
+                <div id="stoneDOM"></div>
+                <div class="mt-5 h1" id="result"></div>
+            </div>    
+
+            <!-- Tableaux des resultats intermédiaires et finaux-->
+            <div id="table" class="mt-5">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Joueur</th>
+                            <th>Essai</th>
+                            <th>Ordinateur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="playerScore" class="player-current-box"></td>
+                            <td id="count" ></td>
+                            <td id="opponentScore" class="player-current-box"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resultats de la partie -->
+            <div class="h1 mt-5" id="verdict"></div>
+
+            <div class="mt-5 mb-5" id="replay"></div>
+
+        </div>
+
+{% endblock %}

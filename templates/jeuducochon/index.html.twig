@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Jeu du Cochon!{% endblock %}
+
+{% block javascripts %}
+    <script src="{{asset('assets/script/cochon.js')}}" defer></script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('assets/styles/cochon.css')}}">
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="container mt-5 text-center">
+            <!-- Zone du joueur 1 avec score presset -->
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <!-- Zone du joueur 2 avec score presset -->
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <!-- Boutons centraux -->
+            <button class="btn-new btn-info" onclick="reload()">Rejouer <span class="far fa-hand-pointer"></span></button>
+            <button class="btn-roll btn-danger"><span class="fas fa-dice"></span>Roll dice</button>
+            <button class="btn-hold btn-success"><span class="fas fa-hand-paper"></span>Hold</button>
+            
+            <!-- Image presset-->
+            <img src="{{asset('assets/images/dice-5.png')}}" alt="Dice" class="dice">
+        </div>
+    </div>
+{% endblock %}

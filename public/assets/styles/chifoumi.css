@@ -1,0 +1,31 @@
+
+  button {
+    padding : 10px;
+    margin : 10px;
+    border-radius : 3px;
+    outline : none;
+    border : none;
+    cursor: pointer;
+    transition : 0.2s;
+  }
+
+  button:active {
+    transform : scale(0.97);
+  }
+
+  .resultat {
+    border : solid black 1px;
+    height : 100px;
+    text-align : center;
+    font-weight: bold;
+    padding : 10px;
+  }
+
+  .player-current-box {
+    background-color: #daafbc !important;
+    color: black;
+    width: 33%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}

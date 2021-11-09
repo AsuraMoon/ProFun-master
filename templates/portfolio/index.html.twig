@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voici un peu de Moi!{% endblock %}
+
+{% block javascripts %}
+    <script src="{{asset('assets/script/portfolio.js')}}" defer></script>
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('assets/styles/portfolio.css')}}">
+    <script src="https://unpkg.com/scrollreveal"></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+    
+            <header class="col-10">
+                <div class="row">
+                    <h1 class="col align-self-center" id="me">
+                        Rebonjour,<br/> Je suis Julien "Asura"
+                    </h1>
+                    <img src="{{asset('assets/images/PP.jpg')}}" alt="Photo de Profil" class="col round" id="pp">
+                </div>
+            </header>
+
+            <section class="mt-5" id="about">
+                <a href="https://www.linkedin.com/in/julien-fredenucci-36487b1b9/"><img src="{{asset('assets/images/linkedin.png')}}" alt="Linkedin" id="link"></a>
+                <a href="https://github.com/AsuraMoon"><img src="{{asset('assets/images/github.png')}}" alt="github" id="link"></a>
+            </section>
+
+            <section class="mt-5" class="right">
+                <h3 class="right">Personnalité</h3>
+                <p class="right">
+                    Dynamique et déterminé, je suis une personne très sociable et autonome.<br/>
+                    Je sais me montrer disponible et volontaire pour toutes les missions.<br/>
+                    Je parle de manière intelligible et concise afin de partager mes connaissances et d'en recevoir.<br/>
+                    Je parle avec un niveau courant l'Anglais.
+                </p>
+            </section>
+
+            <div class="row mt-5">
+                <h3>Compétences</h3>
+                <section class=" col-6" id="front">
+                    <div class="rating-progress-bars p-3">
+                        <div class="progress-1 align-items-center">
+                            <div>HTML</div>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark text-white" role="progressbar" style="width: 60%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> 60% </div>
+                            </div>
+                            <div>CSS</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                            <div>Bootstrap</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+                            </div>
+                            <div>JS</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+                            </div>
+                            <div>Vue.JS</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                            <div>React.JS</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">15%</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>            
+                <section class="mt-5 col-6" id="end">
+                    <div class="rating-progress-bars p-3">
+                        <div class="progress-1 align-items-center">
+                            <div>PHP</div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 45%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> 45% </div>
+                            </div>
+                            <div>MySQL</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">35%</div>
+                            </div>
+                            <div>Symfony</div>                        
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">45%</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>           
+    </div>
+
+{% endblock %}
